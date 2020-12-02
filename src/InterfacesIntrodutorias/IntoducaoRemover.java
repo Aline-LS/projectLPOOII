@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Emilio
  */
 public class IntoducaoRemover implements ItemIntrodutorio{
-    
+    // quando a interface de introdução do cadastro for chamado aparecera a mensagem abaixo
     @Override
     public void Introducao() {
         JOptionPane.showMessageDialog(null,"Este é um sistema na qual faz Remoção de Pessoas, "

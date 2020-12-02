@@ -10,5 +10,6 @@ package InterfacesIntrodutorias;
  * @author Emilio
  */
 public interface ItemIntrodutorio {
+    // chamada de interfaces
     public void Introducao();
 }

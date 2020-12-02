@@ -51,12 +51,14 @@ public class MenuPessoas {
                         + "6 - Cadastro de Tecnico \n "
                         + "7 - Cadastro de Outro Funcionario \n "
                         + "8 - Sair");
+                 // se a entrada for nula que dizer que o usuário optou a tecla cancelar
                 if (entrada == null) {
                     JOptionPane.showMessageDialog(null, "Finalizando Sistema", "Saindo...", JOptionPane.INFORMATION_MESSAGE);
                     System.exit(0);
 
                 }
                  numeros = true;
+                 // condição para aceitar apenas numeros na entrada, se colocar entrada como letra ou outro caracter, então sitema entra em loop ate que seja colocado caracter numerico
                 if (!entrada.matches("\\d+")) {
                     numeros = false;
                 }
@@ -67,7 +69,7 @@ public class MenuPessoas {
                 if ("".equals(entrada)) {
 
                 }
-
+                //transformar String em inteiro para poder rodar o switch e case
                 menupessoa = Integer.parseInt(entrada);
 
             switch (menupessoa) {

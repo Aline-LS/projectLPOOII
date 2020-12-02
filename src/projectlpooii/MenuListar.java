@@ -44,11 +44,13 @@ public class MenuListar {
                         + "8 - Sair");
                 //condição da opções
                 numeros = true;
+                // se a entrada for nula que dizer que o usuário optou a tecla cancelar
                 if (entrada == null) {
                     JOptionPane.showMessageDialog(null, "Finalizando Sistema", "Saindo...", JOptionPane.INFORMATION_MESSAGE);
                     System.exit(0);
 
                 }
+                // condição para aceitar apenas numeros na entrada, se colocar entrada como letra ou outro caracter, então sitema entra em loop ate que seja colocado caracter numerico
                 if (!entrada.matches("\\d+")) {
                     numeros = false;
                 }
@@ -59,11 +61,11 @@ public class MenuListar {
             if ("".equals(entrada)) {
 
             }
-
+            //transformar String em inteiro para poder rodar o switch e case
             menulistar = Integer.parseInt(entrada);
             switch (menulistar) {
                 case 1:
-                    // pequena explicação do sistema e apos lido o usuário retorna ao menu principal
+                    // pequena explicação do sistema é chamado pela interface e apos lido o usuário retorna ao menu principal
                     //JOptionPane.showMessageDialog(null,"Este é um sistema na qual faz cadastramento de Pessoas, Você pode escolher dentre as opções: \n 1 - Professor \n 2 - Gestor \n 3 - Auxiliar \n 4 - Outro tipo de Funcionario");
                     //MenuPessoas mpe = new MenuPessoas(1);
                     //mpe.MostrarMenuPessoas(); 
